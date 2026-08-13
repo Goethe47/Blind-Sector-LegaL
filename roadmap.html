@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Blind Sector — дорожная карта</title>
-  <meta name="description" content="Что уже есть в сборке Blind Sector, что доделывается во время закрытого теста и что будет после него." />
+  <meta name="description" content="Журнал закрытого теста Blind Sector: что в игре есть, что нашли, что исправлено и что ещё нет." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -13,67 +13,212 @@
       <a href="index.html">Privacy</a>
       <a href="licenses.html">Licenses</a>
       <a href="roadmap.html" aria-current="page">Roadmap</a>
+      <span class="langswitch">
+        <button type="button" data-set="ru" aria-pressed="true">Рус</button>
+        <button type="button" data-set="en" aria-pressed="false">Eng</button>
+      </span>
     </nav>
 
-    <header class="page-header">
-      <p class="eyebrow">Blind Sector — эвакуационный протокол</p>
-      <h1>Дорожная карта</h1>
-      <p class="lead">Честный список: что в сборке уже работает, что мы доделываем прямо во время закрытого теста и что осознанно отложено. Планы — это планы, а не обещания.</p>
-      <p class="meta">Обновлено: 13.08.2026 · Закрытый тест: 14 дней с 13–14 августа 2026</p>
-    </header>
+    <!-- ================================ РУССКИЙ ================================ -->
+    <div data-lang="ru">
+      <header class="page-header">
+        <p class="eyebrow">Blind Sector — эвакуационный протокол</p>
+        <h1>Дорожная карта</h1>
+        <p class="lead">Живой журнал закрытого теста: что в игре есть, что нашли тестеры, что уже исправлено и что ещё нет. Страница обновляется по ходу теста.</p>
+        <p class="meta">Обновлено: 14.08.2026 · Закрытый тест: 14 дней</p>
+      </header>
 
-    <section>
-      <h2>Что уже есть</h2>
-      <ul>
-        <li><strong>Пять секторов целиком</strong> — промышленная окраина, ночной Чайнатаун, корпоративные высоты, затопленный порт и обесточенный центр. У каждого своя палитра, погода и фирменная опасность, все открыты сразу.</li>
-        <li><strong>Проходимость проверяется автоматически</strong> при каждой сборке: если авторская трасса вдруг перестанет проходиться, сборка не соберётся.</li>
-        <li><strong>Одиннадцать языков</strong> интерфейса.</li>
-        <li><strong>Продолжение за просмотр рекламы</strong> — добровольное, один раз за попытку, с возвратом на последнюю эвакуационную площадку.</li>
-        <li><strong>Возрастной экран и выбор рекламных настроек</strong> до первого запроса рекламы.</li>
-      </ul>
-    </section>
+      <section>
+        <h2>Цель теста</h2>
+        <p>К концу этих двух недель игра должна быть готова полностью: все пять секторов, вступительные комиксы ко всем секторам, эффекты и локализация. Тест нужен не чтобы решить, что делать дальше, а чтобы найти то, что мы сами не видим — на чужих устройствах, чужих языках и с чужими руками.</p>
+      </section>
 
-    <section>
-      <h2>Во время теста, по приоритету</h2>
-      <p>Две недели — это мало, поэтому список короткий и отсортирован по тому, что сильнее всего чувствуется в игре.</p>
-      <ul>
-        <li><strong>Продолжение доступно слишком поздно.</strong> Сейчас оно предлагается только после первой эвакуационной площадки, а это примерно пятая часть маршрута. Тот, кто разбился на первой минуте, кнопки не увидит — именно новичок, которому она нужнее всего. Хотим давать точку возврата и до первой площадки.</li>
-        <li><strong>Эвакуация и победа без эффектов.</strong> Самый важный момент игры — забрать людей — сейчас это только звук и полоска загрузки. Планируем световой столб над площадкой и внятную вспышку на финише.</li>
-        <li><strong>Проверка длины строк на устройствах.</strong> Немецкий и польский заметно длиннее английского, а кнопки в интерфейсе с фиксированными пропорциями. Нужен проход по всем одиннадцати языкам на реальном экране.</li>
-        <li><strong>Частота рекламы по реальным данным.</strong> Сейчас пороги выставлены осторожно и вслепую. По статистике теста подкрутим, но правило останется прежним: во время полёта рекламы нет никогда.</li>
-      </ul>
-    </section>
+      <section>
+        <h2>Что уже в игре</h2>
+        <ul>
+          <li><strong>Пять секторов целиком</strong> — промышленная окраина, ночной Чайнатаун, корпоративные высоты, затопленный порт и обесточенный центр. У каждого своя палитра, погода и фирменная опасность, все открыты сразу.</li>
+          <li><strong>Проходимость проверяется автоматически</strong> при каждой сборке: если трасса перестанет проходиться, сборка просто не соберётся.</li>
+          <li><strong>Одиннадцать языков</strong> интерфейса.</li>
+          <li><strong>Продолжение за просмотр рекламы</strong> — добровольное, один раз за попытку, с возвратом на последнюю эвакуационную площадку.</li>
+          <li><strong>Возрастной экран и выбор рекламных настроек</strong> до первого запроса рекламы.</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>После теста</h2>
-      <ul>
-        <li><strong>Вступительные комиксы для секторов 2–5.</strong> Сейчас нарисован только первый, у остальных вступление текстовое.</li>
-        <li><strong>Захват ПВО в мире, а не только в интерфейсе.</strong> Сейчас о наведении говорит полоска в углу и подсветка корпуса; хочется луч от эмиттера к кораблю.</li>
-        <li><strong>Языки с другой письменностью</strong> — японский, корейский, китайский, арабский. Требуют своих шрифтов, поэтому это отдельная работа, а не строчка в таблице переводов.</li>
-        <li><strong>Запрет резервного копирования</strong> локальных данных на уровне Android.</li>
-      </ul>
-    </section>
+      <section>
+        <h2>Журнал теста</h2>
+        <p>Сюда попадает всё, что нашли — и мы, и тестеры. Список пополняется в ходе теста.</p>
+        <div class="log-wrap">
+          <table class="log">
+            <thead>
+              <tr><th>Дата</th><th>Что</th><th>Статус</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>14.08</td>
+                <td>Продолжение за рекламу доступно только после первой эвакуационной площадки — это примерно пятая часть маршрута. Тот, кто разбился на первой минуте, кнопки не увидит вовсе.</td>
+                <td><span class="st st-wip">в работе</span></td>
+              </tr>
+              <tr>
+                <td>14.08</td>
+                <td>Эвакуация и финиш без эффектов: самый важный момент игры — забрать людей — это сейчас только звук и полоска загрузки.</td>
+                <td><span class="st st-wip">в работе</span></td>
+              </tr>
+              <tr>
+                <td>14.08</td>
+                <td>Вступительные комиксы есть только у первого сектора, у остальных четырёх вступление текстовое.</td>
+                <td><span class="st st-open">не начато</span></td>
+              </tr>
+              <tr>
+                <td>14.08</td>
+                <td>Длина строк на одиннадцати языках не проверена на живых экранах. Немецкий и польский заметно длиннее английского.</td>
+                <td><span class="st st-open">не начато</span></td>
+              </tr>
+              <tr>
+                <td>14.08</td>
+                <td>Частота рекламы выставлена осторожно и вслепую — нужна подстройка по реальным данным теста.</td>
+                <td><span class="st st-open">не начато</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-    <section class="warn">
-      <h2>Что особенно полезно прислать</h2>
-      <p>Тестирование на двух неделях полезнее всего там, где мы сами проверить не можем:</p>
-      <ul>
-        <li><strong>Модель устройства и версию Android</strong> — вместе с любой жалобой на плавность. Игра рассчитана на стабильные 30 кадров.</li>
-        <li><strong>Место, где стало непонятно</strong>, что делать или почему погиб. Это важнее, чем «сложно».</li>
-        <li><strong>Реклама, которая помешала.</strong> Если она появилась там, где по ощущению не должна была — это ошибка, и мы хотим о ней знать.</li>
-        <li><strong>Обрезанный или налезающий текст</strong> на вашем языке, со скриншотом.</li>
-      </ul>
-    </section>
+      <section class="warn">
+        <h2>Что особенно полезно прислать</h2>
+        <ul>
+          <li><strong>Модель устройства и версию Android</strong> — вместе с любой жалобой на плавность. Игра рассчитана на стабильные 30 кадров.</li>
+          <li><strong>Место, где стало непонятно</strong>, что делать или почему погиб. Это важнее, чем «сложно».</li>
+          <li><strong>Реклама, которая помешала.</strong> Если она появилась там, где по ощущению не должна была — это ошибка, и мы хотим о ней знать.</li>
+          <li><strong>Обрезанный или налезающий текст</strong> на вашем языке, со скриншотом.</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>Чего в планах нет</h2>
-      <p>Чтобы не гадать: <strong>встроенных покупок, платных бустеров и энергии не будет.</strong> Игра остаётся бесплатной и держится на рекламе, а реклама — вне полёта. Продолжение за видео добровольное: «Повторить», «К уровням» и «Главное меню» всегда работают без просмотра.</p>
-    </section>
+      <section>
+        <h2>Чего не будет</h2>
+        <p>Чтобы не гадать: <strong>встроенных покупок, платных бустеров и энергии не будет.</strong> Игра остаётся бесплатной и держится на рекламе, а рекламы во время полёта нет. Продолжение за видео добровольное: «Повторить», «К уровням» и «Главное меню» всегда работают без просмотра.</p>
+      </section>
 
-    <p class="footer">
-      Blind Sector · Goethe47 · <a href="index.html">Privacy policy</a> · <a href="licenses.html">Licenses</a><br />
-      Обратная связь: burteloffluther@gmail.com
-    </p>
+      <p class="footer">
+        Blind Sector · Goethe47 · <a href="index.html">Политика конфиденциальности</a> · <a href="licenses.html">Лицензии</a><br />
+        Обратная связь: burteloffluther@gmail.com
+      </p>
+    </div>
+
+    <!-- ================================ ENGLISH ================================ -->
+    <div data-lang="en" hidden>
+      <header class="page-header">
+        <p class="eyebrow">Blind Sector — Evacuation Protocol</p>
+        <h1>Roadmap</h1>
+        <p class="lead">A running log of the closed test: what is in the game, what testers found, what is fixed and what is not. This page is updated as the test goes on.</p>
+        <p class="meta">Last updated: 2026-08-14 · Closed test: 14 days</p>
+      </header>
+
+      <section>
+        <h2>What the test is for</h2>
+        <p>By the end of these two weeks the game should be complete: all five sectors, opening comics for every sector, effects and localization. The test is not there to decide what to build — it is there to find what we cannot see ourselves, on other people's devices, other people's languages and with other people's hands.</p>
+      </section>
+
+      <section>
+        <h2>Already in the game</h2>
+        <ul>
+          <li><strong>All five sectors</strong> — industrial outskirts, night Chinatown, corporate heights, flooded old port and the blackout core. Each has its own palette, weather and signature hazard, and all are unlocked from the start.</li>
+          <li><strong>Route passability is verified automatically</strong> on every build: if a route stops being flyable, the build simply fails.</li>
+          <li><strong>Eleven interface languages.</strong></li>
+          <li><strong>Continue by watching an ad</strong> — voluntary, once per attempt, resuming at the last evacuation platform.</li>
+          <li><strong>Age screen and advertising choices</strong> before any ad is ever requested.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Test log</h2>
+        <p>Everything found goes here, whether we found it or a tester did. The list grows as the test runs.</p>
+        <div class="log-wrap">
+          <table class="log">
+            <thead>
+              <tr><th>Date</th><th>What</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>14 Aug</td>
+                <td>The rewarded continue is only offered after the first evacuation platform, roughly a fifth of the way through. Anyone who crashes in the first minute never sees the button at all.</td>
+                <td><span class="st st-wip">in progress</span></td>
+              </tr>
+              <tr>
+                <td>14 Aug</td>
+                <td>Evacuation and the finish have no effects: the most important moment in the game — picking people up — is currently just a sound and a progress bar.</td>
+                <td><span class="st st-wip">in progress</span></td>
+              </tr>
+              <tr>
+                <td>14 Aug</td>
+                <td>Opening comics exist only for the first sector; the other four have text-only briefings.</td>
+                <td><span class="st st-open">not started</span></td>
+              </tr>
+              <tr>
+                <td>14 Aug</td>
+                <td>String lengths across eleven languages have not been checked on real screens. German and Polish run noticeably longer than English.</td>
+                <td><span class="st st-open">not started</span></td>
+              </tr>
+              <tr>
+                <td>14 Aug</td>
+                <td>Ad frequency was set conservatively and blind — it needs tuning against real data from the test.</td>
+                <td><span class="st st-open">not started</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="warn">
+        <h2>What is most useful to send</h2>
+        <ul>
+          <li><strong>Device model and Android version</strong> with any complaint about smoothness. The game targets a steady 30 frames.</li>
+          <li><strong>The place where it stopped being clear</strong> what to do, or why you died. That is more useful than "it's hard".</li>
+          <li><strong>An ad that got in the way.</strong> If one appeared where it felt like it shouldn't have, that is a bug and we want to hear about it.</li>
+          <li><strong>Clipped or overlapping text</strong> in your language, with a screenshot.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>What there will not be</h2>
+        <p>So nobody has to guess: <strong>there will be no in-app purchases, no paid boosters and no energy.</strong> The game stays free and is supported by advertising, and there is no advertising while you are flying. The rewarded continue is voluntary: Retry, Levels and Main Menu always work without watching anything.</p>
+      </section>
+
+      <p class="footer">
+        Blind Sector · Goethe47 · <a href="index.html">Privacy policy</a> · <a href="licenses.html">Licenses</a><br />
+        Feedback: burteloffluther@gmail.com
+      </p>
+    </div>
   </main>
+
+  <script>
+    (function () {
+      var blocks = document.querySelectorAll('[data-lang]');
+      var buttons = document.querySelectorAll('.langswitch button');
+
+      function apply(lang) {
+        for (var i = 0; i < blocks.length; i++) {
+          blocks[i].hidden = blocks[i].getAttribute('data-lang') !== lang;
+        }
+        for (var j = 0; j < buttons.length; j++) {
+          buttons[j].setAttribute('aria-pressed', buttons[j].getAttribute('data-set') === lang ? 'true' : 'false');
+        }
+        document.documentElement.lang = lang;
+        try { localStorage.setItem('bs-roadmap-lang', lang); } catch (e) { /* private mode */ }
+      }
+
+      var saved = null;
+      try { saved = localStorage.getItem('bs-roadmap-lang'); } catch (e) { /* private mode */ }
+      // Remembered choice first, then the browser's own language, then Russian.
+      apply(saved === 'en' || saved === 'ru'
+        ? saved
+        : ((navigator.language || 'ru').toLowerCase().indexOf('ru') === 0 ? 'ru' : 'en'));
+
+      for (var k = 0; k < buttons.length; k++) {
+        buttons[k].addEventListener('click', function () {
+          apply(this.getAttribute('data-set'));
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

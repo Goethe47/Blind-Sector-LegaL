@@ -19,7 +19,7 @@
       <p class="eyebrow">Blind Sector — Evacuation Protocol</p>
       <h1>Privacy Policy</h1>
       <p class="lead">This policy describes what the app actually does today, not what it might do later. Where a claim depends on someone else's system, it says so.</p>
-      <p class="meta">Last updated: 2026-08-13 · Package: <code>com.goethe47.blindsector</code></p>
+      <p class="meta">Last updated: 2026-08-14 · Package: <code>com.goethe47.blindsector</code></p>
     </header>
 
     <section>
@@ -40,7 +40,7 @@
 
     <section>
       <h2>Data stored locally on your device</h2>
-      <p>The following lives in the app's own storage on your device. Goethe47 operates no server, so this data is not sent to us and no copy of it exists outside your device:</p>
+      <p>The following lives in the app's own storage on your device. Goethe47 operates no server, so Blind Sector does not send this data to us and we hold no copy of it. Android itself may still include it in a platform backup or a device transfer — see "Deletion and local storage" below:</p>
       <ul>
         <li><strong>Progress for each of the five sectors</strong> — best route percentage, most survivors rescued, number of attempts, whether the sector was cleared, and on which attempt.</li>
         <li><strong>Your settings</strong> — language, master audio, music, sound effects, vibration and strong-effects toggles.</li>
@@ -73,7 +73,7 @@
       <h2>Engine diagnostics (cannot be switched off in-game)</h2>
       <p>Blind Sector is built with the Unity engine, and Unity's own <strong>engine diagnostics are enabled</strong> in this build. Separately from everything above, Unity may receive technical information about the app and the device running it — for example the engine and app version, the operating system version, the device model and session-level technical data — used to operate and improve the engine.</p>
       <p>This is collected by the engine itself, not by Blind Sector's code, and there is no in-game switch that controls it. It contains no name, email address, contact, photo, file, message or location more precise than what Unity derives itself, and it is not used to select which advertisements you see. How Unity handles it is described in <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Unity's Player and App User Privacy Policy</a>.</p>
-      <p>Whether a given build actually transmits this data is determined by Unity's implementation rather than by Blind Sector. It is disclosed here on the assumption that it does, because understating what leaves your device would be the worse mistake.</p>
+      <p>Whether a given build actually transmits this data is determined by Unity's implementation rather than by Blind Sector. It is disclosed here on the assumption that it does.</p>
     </section>
 
     <section>
@@ -93,12 +93,14 @@
 
     <section>
       <h2>Purposes of processing</h2>
-      <p>Ad delivery and measurement; ad personalization, but only if you are an adult and chose it; frequency capping so full-screen ads are not repeated too often; fraud prevention and security for the advertising system; and, separately, engine diagnostics for operating and improving Unity. There is no profiling for any purpose of Goethe47's own, because Goethe47 receives no data at all.</p>
+      <p>Ad delivery and measurement; ad personalization, but only if you are an adult and chose it; frequency capping so full-screen ads are not repeated too often; fraud prevention and security for the advertising system; and, separately, engine diagnostics for operating and improving Unity. Blind Sector's own code performs no profiling and sends nothing to Goethe47: we run no server and keep no player database. Unity may make aggregated advertising reporting — impressions, revenue and similar figures — available to us through its dashboard.</p>
     </section>
 
     <section>
       <h2>Legal bases, where applicable</h2>
-      <p>Where consent is legally required, Blind Sector relies on the consent you give through the age band and advertising screens described above, obtained before the advertising SDK is initialized and before any ad is requested. Limited processing needed for non-personalized ad delivery, measurement, security and fraud prevention may rest on legitimate interests or another basis available to Unity, subject to applicable law. That is not a claim that legitimate interests alone satisfies every EU/UK ePrivacy requirement about storing or accessing information on a device; where consent is required for that access, it is obtained first. This policy does not claim final legal compliance in every jurisdiction, and jurisdiction-specific review remains sensible.</p>
+      <p>What the app actually collects is this: the advertising SDK is not initialized and no ad is requested until the age screen is answered. An adult is then asked, separately and with nothing preselected, whether they accept personalized advertising and whether they want the sale or sharing of their data restricted. A user under 18 is not asked and receives non-personalized advertising with the sale/share restriction on.</p>
+      <p><strong>The limits of that, stated plainly.</strong> Blind Sector does not detect your country or region and does not currently run a consent management platform. In the EEA and the UK, storing or accessing information on a device for advertising purposes — including the technical delivery and measurement of an ad, not only its personalization — generally requires prior consent under Article 5(3) of the ePrivacy Directive and the UK ICO's guidance. Non-personalized advertising is not automatically exempt from that requirement. The screens described above are not presented as satisfying it for every user in every country, and a consent management platform is being integrated so that consent can be requested where local law requires it.</p>
+      <p>Where consent is validly given, it is the basis relied on. Limited processing needed for ad delivery, measurement, security and fraud prevention may rest on another basis available to Unity, subject to applicable law. This policy does not claim final legal compliance in every jurisdiction, and jurisdiction-specific review remains necessary.</p>
     </section>
 
     <section>
@@ -124,7 +126,8 @@
 
     <section>
       <h2>Data recipients</h2>
-      <p>Unity Technologies, through the LevelPlay mediation platform and the Unity Ads network — the only network integrated in this build — and through Unity's engine diagnostics. There are no other recipients, and Goethe47 receives no data about you at all.</p>
+      <p>Blind Sector integrates only <strong>Unity LevelPlay</strong> and the <strong>Unity Ads</strong> network directly; no other advertising network's SDK or adapter is present in the build. Unity also receives data through its engine diagnostics.</p>
+      <p>That is a statement about what this app contains, not a promise about what Unity does afterwards. Unity may pass data to its own service providers, advertising partners, demand sources and other recipients as described in Unity's policy, and advertising inventory may be sold to demand sources that Blind Sector neither chooses nor sees. Goethe47 has no visibility into and no control over those onward transfers beyond what Unity discloses.</p>
       <p>To exercise a right over data held in Unity's systems, contact Unity using the details in <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">their policy</a>, or write to Goethe47 at the address above and we will help route the request. Goethe47 chose and configured the advertising SDK in this app and does not disclaim responsibility for that choice merely because we run no server of our own.</p>
     </section>
 
@@ -140,13 +143,15 @@
 
     <section>
       <h2>Deletion and local storage</h2>
-      <p>Uninstalling Blind Sector or clearing its storage removes everything listed under local storage, including your progress and your privacy choices. Because there is no account and no server, there is no separate account-deletion step.</p>
-      <p><strong>Android backup is at the platform default for this build:</strong> Blind Sector does not currently set <code>android:allowBackup="false"</code>, so Android may include the app's local data in a device backup or a device-to-device transfer under the platform's own rules. That data is the progress and settings listed above; it contains no account credentials and nothing that identifies you personally. This is stated because it is true, not because it is ideal.</p>
+      <p>Uninstalling Blind Sector or clearing its storage removes the app's own local copy of everything listed above, including your progress and your privacy choices. Because there is no account and no server, there is no separate account-deletion step.</p>
+      <p><strong>Android backup is at the platform default for this build:</strong> Blind Sector does not currently set <code>android:allowBackup="false"</code>, so Android may independently include the app's local data in a cloud backup or a device-to-device transfer under the platform's own rules. Such a backup is created and controlled by Android and your device settings, not by Blind Sector, and it may survive uninstalling the app. To remove it, use the backup controls of your Google account or your device. The data involved is the progress and settings listed above; it contains no account credentials.</p>
     </section>
 
     <section>
       <h2>Children</h2>
-      <p>Blind Sector is not designed for children and is not enrolled in Google Play's Designed for Families programme. The under-13 band exists so that a child who reaches the game anyway is treated conservatively — COPPA flag set, no personalized advertising, sale/share restricted — rather than being ignored.</p>
+      <p>Blind Sector is not directed to children. Its Google Play target audience is 13 and older, children are not among the selected age groups, and it is not enrolled in the Designed for Families programme. The under-13 band exists so that a child who reaches the game anyway is treated conservatively — COPPA flag set for every supported ad network, advertising consent denied, sale and sharing restricted — rather than being ignored.</p>
+      <p><strong>Persistent identifiers for a user in that band.</strong> When the COPPA flag is set, Blind Sector's understanding is that Unity may still use a persistent identifier for support for the internal operations of the service, and for nothing else. Those permitted uses are: delivering an advertisement that is chosen from the context rather than from the user, limiting how often the same advertisement is shown, maintaining and analysing the functioning of the app and the advertising system, protecting the security and integrity of that system, detecting and preventing fraud, and complying with legal obligations.</p>
+      <p>In that mode the identifier is not used to build a profile of the user, to select advertising from their behaviour or interests, or to contact them. The measure preventing other uses is the COPPA flag itself, which Blind Sector sets before the SDK is initialized and which instructs every supported ad network to operate in its child-directed mode; Blind Sector requests no personalized advertising for that band under any circumstances, and the setting cannot be changed by the user without going through the age screen again. Enforcement of the restriction inside Unity's own systems is Unity's, described in Unity's policy.</p>
     </section>
 
     <section>
