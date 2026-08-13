@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Blind Sector — дорожная карта</title>
-  <meta name="description" content="Журнал закрытого теста Blind Sector: что в игре есть, что нашли, что исправлено и что ещё нет." />
+  <meta name="description" content="Маршрут разработки Blind Sector: что уже пройдено, что в работе и что осталось до релиза." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -19,68 +19,82 @@
       </span>
     </nav>
 
+    <!--
+      Как обновлять маршрут: у каждой точки один из трёх классов —
+        done  пройдено      (бирюзовый маркер, галочка в заголовке)
+        wip   в работе      (янтарный мигающий маркер)
+        open  впереди       (пустой маркер)
+      Перевести пункт = поменять класс в обоих языковых блоках
+      и обновить числа в .progress.
+    -->
+
     <!-- ================================ РУССКИЙ ================================ -->
     <div data-lang="ru">
       <header class="page-header">
         <p class="eyebrow">Blind Sector — эвакуационный протокол</p>
-        <h1>Дорожная карта</h1>
-        <p class="lead">Живой журнал закрытого теста: что в игре есть, что нашли тестеры, что уже исправлено и что ещё нет. Страница обновляется по ходу теста.</p>
-        <p class="meta">Обновлено: 14.08.2026 · Закрытый тест: 14 дней</p>
+        <h1>Маршрут разработки</h1>
+        <p class="lead">Закрытый тест, четырнадцать дней. К выходу из коридора игра должна быть готова целиком. Здесь видно, что уже пройдено, что горит прямо сейчас и что ещё впереди.</p>
+        <p class="meta">Обновлено: 14.08.2026</p>
       </header>
 
       <section>
-        <h2>Цель теста</h2>
-        <p>К концу этих двух недель игра должна быть готова полностью: все пять секторов, вступительные комиксы ко всем секторам, эффекты и локализация. Тест нужен не чтобы решить, что делать дальше, а чтобы найти то, что мы сами не видим — на чужих устройствах, чужих языках и с чужими руками.</p>
-      </section>
-
-      <section>
-        <h2>Что уже в игре</h2>
-        <ul>
-          <li><strong>Пять секторов целиком</strong> — промышленная окраина, ночной Чайнатаун, корпоративные высоты, затопленный порт и обесточенный центр. У каждого своя палитра, погода и фирменная опасность, все открыты сразу.</li>
-          <li><strong>Проходимость проверяется автоматически</strong> при каждой сборке: если трасса перестанет проходиться, сборка просто не соберётся.</li>
-          <li><strong>Одиннадцать языков</strong> интерфейса.</li>
-          <li><strong>Продолжение за просмотр рекламы</strong> — добровольное, один раз за попытку, с возвратом на последнюю эвакуационную площадку.</li>
-          <li><strong>Возрастной экран и выбор рекламных настроек</strong> до первого запроса рекламы.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Журнал теста</h2>
-        <p>Сюда попадает всё, что нашли — и мы, и тестеры. Список пополняется в ходе теста.</p>
-        <div class="log-wrap">
-          <table class="log">
-            <thead>
-              <tr><th>Дата</th><th>Что</th><th>Статус</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>14.08</td>
-                <td>Продолжение за рекламу доступно только после первой эвакуационной площадки — это примерно пятая часть маршрута. Тот, кто разбился на первой минуте, кнопки не увидит вовсе.</td>
-                <td><span class="st st-wip">в работе</span></td>
-              </tr>
-              <tr>
-                <td>14.08</td>
-                <td>Эвакуация и финиш без эффектов: самый важный момент игры — забрать людей — это сейчас только звук и полоска загрузки.</td>
-                <td><span class="st st-wip">в работе</span></td>
-              </tr>
-              <tr>
-                <td>14.08</td>
-                <td>Вступительные комиксы есть только у первого сектора, у остальных четырёх вступление текстовое.</td>
-                <td><span class="st st-open">не начато</span></td>
-              </tr>
-              <tr>
-                <td>14.08</td>
-                <td>Длина строк на одиннадцати языках не проверена на живых экранах. Немецкий и польский заметно длиннее английского.</td>
-                <td><span class="st st-open">не начато</span></td>
-              </tr>
-              <tr>
-                <td>14.08</td>
-                <td>Частота рекламы выставлена осторожно и вслепую — нужна подстройка по реальным данным теста.</td>
-                <td><span class="st st-open">не начато</span></td>
-              </tr>
-            </tbody>
-          </table>
+        <h2>Готовность</h2>
+        <div class="progress">
+          <div class="bar"><span style="width: 37.5%"></span></div>
+          <div class="count">3 / 8</div>
         </div>
+        <p>Точки маршрута, закрытые к этому моменту. Список пополняется тем, что находят тестеры, поэтому знаменатель может расти.</p>
+
+        <ol class="route">
+          <li class="wp done">
+            <span class="when">Пройдено</span>
+            <h3>Пять секторов целиком</h3>
+            <p>Промышленная окраина, ночной Чайнатаун, корпоративные высоты, затопленный порт и обесточенный центр. У каждого своя палитра, погода и фирменная опасность. Все открыты сразу, проходимость каждой трассы проверяется автоматически при сборке.</p>
+          </li>
+          <li class="wp done">
+            <span class="when">Пройдено</span>
+            <h3>Одиннадцать языков</h3>
+            <p>Весь интерфейс, подсказки, брифинги и причины поражения. Английский, русский, испанский, португальский, немецкий, французский, итальянский, турецкий, индонезийский, польский и украинский.</p>
+          </li>
+          <li class="wp done">
+            <span class="when">Пройдено</span>
+            <h3>Реклама и согласие</h3>
+            <p>Баннер вне полёта, полноэкранная только между попытками, добровольное видео за продолжение с последней площадки. Возрастной экран и рекламные настройки — до того, как рекламный SDK вообще запустится.</p>
+          </li>
+
+          <li class="wp wip">
+            <span class="when">В работе</span>
+            <h3>Продолжение доступно раньше</h3>
+            <p>Сейчас видео за продолжение предлагается только после первой эвакуационной площадки — это пятая часть маршрута. Тот, кто разбился на первой минуте, кнопки не увидит вовсе, хотя нужна она именно ему.</p>
+          </li>
+          <li class="wp wip">
+            <span class="when">В работе</span>
+            <h3>Эффекты эвакуации и финиша</h3>
+            <p>Самый важный момент игры — забрать людей — это пока только звук и полоска загрузки. Нужен световой столб над площадкой и внятная точка на финише.</p>
+          </li>
+
+          <li class="wp open">
+            <span class="when">Впереди</span>
+            <h3>Комиксы для секторов 2–5</h3>
+            <p>Нарисован только первый, у остальных четырёх вступление текстовое. К концу теста комиксы должны быть у всех.</p>
+          </li>
+          <li class="wp open">
+            <span class="when">Впереди</span>
+            <h3>Вычитка одиннадцати языков на устройствах</h3>
+            <p>Немецкий и польский заметно длиннее английского, а кнопки в интерфейсе с фиксированными пропорциями. Нужен проход по каждому языку на живом экране.</p>
+          </li>
+          <li class="wp open">
+            <span class="when">Впереди</span>
+            <h3>Настройка частоты рекламы</h3>
+            <p>Пороги выставлены осторожно и вслепую. По данным теста подкрутим, но правило останется прежним: во время полёта рекламы нет никогда.</p>
+          </li>
+
+          <li class="wp gate">
+            <span class="when">Выход из коридора</span>
+            <h3>Релиз</h3>
+            <p>Когда закрыты все точки выше.</p>
+          </li>
+        </ol>
       </section>
 
       <section class="warn">
@@ -108,64 +122,69 @@
     <div data-lang="en" hidden>
       <header class="page-header">
         <p class="eyebrow">Blind Sector — Evacuation Protocol</p>
-        <h1>Roadmap</h1>
-        <p class="lead">A running log of the closed test: what is in the game, what testers found, what is fixed and what is not. This page is updated as the test goes on.</p>
-        <p class="meta">Last updated: 2026-08-14 · Closed test: 14 days</p>
+        <h1>Development route</h1>
+        <p class="lead">A fourteen-day closed test. By the end of the corridor the game should be complete. This page shows what has been cleared, what is burning right now and what is still ahead.</p>
+        <p class="meta">Last updated: 2026-08-14</p>
       </header>
 
       <section>
-        <h2>What the test is for</h2>
-        <p>By the end of these two weeks the game should be complete: all five sectors, opening comics for every sector, effects and localization. The test is not there to decide what to build — it is there to find what we cannot see ourselves, on other people's devices, other people's languages and with other people's hands.</p>
-      </section>
-
-      <section>
-        <h2>Already in the game</h2>
-        <ul>
-          <li><strong>All five sectors</strong> — industrial outskirts, night Chinatown, corporate heights, flooded old port and the blackout core. Each has its own palette, weather and signature hazard, and all are unlocked from the start.</li>
-          <li><strong>Route passability is verified automatically</strong> on every build: if a route stops being flyable, the build simply fails.</li>
-          <li><strong>Eleven interface languages.</strong></li>
-          <li><strong>Continue by watching an ad</strong> — voluntary, once per attempt, resuming at the last evacuation platform.</li>
-          <li><strong>Age screen and advertising choices</strong> before any ad is ever requested.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Test log</h2>
-        <p>Everything found goes here, whether we found it or a tester did. The list grows as the test runs.</p>
-        <div class="log-wrap">
-          <table class="log">
-            <thead>
-              <tr><th>Date</th><th>What</th><th>Status</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>14 Aug</td>
-                <td>The rewarded continue is only offered after the first evacuation platform, roughly a fifth of the way through. Anyone who crashes in the first minute never sees the button at all.</td>
-                <td><span class="st st-wip">in progress</span></td>
-              </tr>
-              <tr>
-                <td>14 Aug</td>
-                <td>Evacuation and the finish have no effects: the most important moment in the game — picking people up — is currently just a sound and a progress bar.</td>
-                <td><span class="st st-wip">in progress</span></td>
-              </tr>
-              <tr>
-                <td>14 Aug</td>
-                <td>Opening comics exist only for the first sector; the other four have text-only briefings.</td>
-                <td><span class="st st-open">not started</span></td>
-              </tr>
-              <tr>
-                <td>14 Aug</td>
-                <td>String lengths across eleven languages have not been checked on real screens. German and Polish run noticeably longer than English.</td>
-                <td><span class="st st-open">not started</span></td>
-              </tr>
-              <tr>
-                <td>14 Aug</td>
-                <td>Ad frequency was set conservatively and blind — it needs tuning against real data from the test.</td>
-                <td><span class="st st-open">not started</span></td>
-              </tr>
-            </tbody>
-          </table>
+        <h2>Readiness</h2>
+        <div class="progress">
+          <div class="bar"><span style="width: 37.5%"></span></div>
+          <div class="count">3 / 8</div>
         </div>
+        <p>Waypoints cleared so far. The list grows with whatever testers find, so the denominator can move.</p>
+
+        <ol class="route">
+          <li class="wp done">
+            <span class="when">Cleared</span>
+            <h3>All five sectors</h3>
+            <p>Industrial outskirts, night Chinatown, corporate heights, flooded old port and the blackout core. Each has its own palette, weather and signature hazard. All are unlocked from the start, and every route's passability is verified automatically at build time.</p>
+          </li>
+          <li class="wp done">
+            <span class="when">Cleared</span>
+            <h3>Eleven languages</h3>
+            <p>The whole interface, the hints, the briefings and the failure reasons. English, Russian, Spanish, Portuguese, German, French, Italian, Turkish, Indonesian, Polish and Ukrainian.</p>
+          </li>
+          <li class="wp done">
+            <span class="when">Cleared</span>
+            <h3>Advertising and consent</h3>
+            <p>Banner outside of flight, full-screen only between attempts, a voluntary video to resume from the last platform. The age screen and the advertising choices come before the ad SDK starts at all.</p>
+          </li>
+
+          <li class="wp wip">
+            <span class="when">In progress</span>
+            <h3>Earlier access to the continue</h3>
+            <p>The rewarded continue is currently offered only after the first evacuation platform — a fifth of the way through. Anyone who crashes in the first minute never sees the button, though they are exactly who needs it.</p>
+          </li>
+          <li class="wp wip">
+            <span class="when">In progress</span>
+            <h3>Effects for evacuation and the finish</h3>
+            <p>The most important moment in the game — picking people up — is still only a sound and a progress bar. It needs a light column over the platform and a real beat at the finish.</p>
+          </li>
+
+          <li class="wp open">
+            <span class="when">Ahead</span>
+            <h3>Comics for sectors 2–5</h3>
+            <p>Only the first one is drawn; the other four open with text alone. By the end of the test every sector should have one.</p>
+          </li>
+          <li class="wp open">
+            <span class="when">Ahead</span>
+            <h3>Proofing eleven languages on device</h3>
+            <p>German and Polish run noticeably longer than English, and the interface buttons have fixed proportions. Every language needs a pass on a real screen.</p>
+          </li>
+          <li class="wp open">
+            <span class="when">Ahead</span>
+            <h3>Tuning ad frequency</h3>
+            <p>The thresholds were set conservatively and blind. They will be adjusted against test data, but the rule stays: never any advertising while you are flying.</p>
+          </li>
+
+          <li class="wp gate">
+            <span class="when">End of the corridor</span>
+            <h3>Release</h3>
+            <p>When every waypoint above is cleared.</p>
+          </li>
+        </ol>
       </section>
 
       <section class="warn">
