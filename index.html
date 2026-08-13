@@ -66,12 +66,13 @@
 
     <section>
       <h2>Gameplay analytics: none</h2>
-      <p>Blind Sector does <strong>not</strong> use Unity Analytics or any other gameplay-analytics service. Unity Analytics, Unity Cloud Diagnostics crash reporting, Unity Performance Reporting and Unity IAP are all switched off in this build's project configuration. Nothing about how you play — your scores, attempts, routes or session lengths — is transmitted anywhere. That data exists only on your own device, as listed above.</p>
+      <p>Blind Sector does <strong>not</strong> use Unity Analytics or any other gameplay-analytics service. Unity Analytics, Unity Performance Reporting and Unity IAP are switched off in this build's project configuration. Nothing about how you play — your scores, attempts, routes or session lengths — is transmitted anywhere. That data exists only on your own device, as listed above.</p>
+      <p><strong>Crash reporting is a separate thing and it is not fully off.</strong> Unity Cloud Diagnostics, which is an optional Unity service, is switched off. Unity's built-in developer data diagnostics is not, and it can still collect crash logs and other technical data about the app. Do not read "Cloud Diagnostics is off" as "no crash data is collected" — the next section describes what is collected.</p>
     </section>
 
     <section class="warn">
-      <h2>Engine diagnostics (cannot be switched off in-game)</h2>
-      <p>Blind Sector is built with the Unity engine, and Unity's own <strong>engine diagnostics are enabled</strong> in this build. Separately from everything above, Unity may receive technical information about the app and the device running it — for example the engine and app version, the operating system version, the device model and session-level technical data — used to operate and improve the engine.</p>
+      <h2>Crash logs and engine diagnostics (cannot be switched off in-game)</h2>
+      <p>Blind Sector is built with the Unity engine, and Unity's own <strong>developer data diagnostics are enabled</strong> in this build. Separately from everything above, Unity may receive <strong>crash logs</strong>, app diagnostics, other app performance data, technical information about the app and the device running it — for example the engine and app version, the operating system version and the device model — and device or other identifiers. This is used to operate and improve the engine and to find faults.</p>
       <p>This is collected by the engine itself, not by Blind Sector's code, and there is no in-game switch that controls it. It contains no name, email address, contact, photo, file, message or location more precise than what Unity derives itself, and it is not used to select which advertisements you see. How Unity handles it is described in <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Unity's Player and App User Privacy Policy</a>.</p>
       <p>Whether a given build actually transmits this data is determined by Unity's implementation rather than by Blind Sector. It is disclosed here on the assumption that it does.</p>
     </section>
@@ -105,13 +106,16 @@
 
     <section>
       <h2>Google Play Data safety</h2>
-      <p>These categories follow Unity's published Data safety guidance for the Unity Ads SDK. Blind Sector's own code contributes nothing to them, because it transmits nothing:</p>
+      <p>Three components in this build contribute to these categories: the <strong>Unity Ads</strong> network, the <strong>LevelPlay</strong> mediation SDK and Unity's <strong>developer data diagnostics</strong>. Blind Sector's own code adds nothing, because it transmits nothing. Google requires this section and the Play Console declaration to agree; where they ever disagree, the Console declaration for the shipped version is the one to trust, and this page is corrected to match.</p>
       <ul>
         <li><strong>Approximate location</strong> — advertising or marketing; analytics; app functionality; fraud prevention, security and compliance.</li>
         <li><strong>Personal identifiers / user IDs</strong> — app functionality. These are Unity SDK identifiers, not a Blind Sector account.</li>
         <li><strong>Purchase history</strong> — advertising or marketing; analytics. Declared because Unity's own Unity Ads disclosure declares it; Blind Sector having no purchases does not override the embedded SDK's declaration.</li>
-        <li><strong>App interactions</strong> — page views and taps inside the ad experience, from the ad SDK only.</li>
-        <li><strong>App diagnostics</strong> — from the ad SDK and from Unity's engine diagnostics described above.</li>
+        <li><strong>App interactions</strong> — page views and taps inside the ad experience.</li>
+        <li><strong>Other actions</strong> — interactions with advertisements beyond simple views and taps, as reported by the advertising SDKs.</li>
+        <li><strong>Crash logs</strong> — from Unity's developer data diagnostics. App functionality; analytics.</li>
+        <li><strong>App diagnostics</strong> — from the advertising SDKs and from developer data diagnostics.</li>
+        <li><strong>Other app performance data</strong> — from developer data diagnostics.</li>
         <li><strong>Device or other identifiers</strong> — advertising or marketing; analytics; app functionality; fraud prevention, security and compliance.</li>
       </ul>
       <p><strong>One value must be checked against the live dashboard:</strong> Unity states that app usage time is collected only when <strong>Acquire Optimization</strong> is enabled in the Monetization dashboard. Its Yes/No must match that setting before the Play Console declaration is submitted.</p>
@@ -150,7 +154,8 @@
     <section>
       <h2>Children</h2>
       <p>Blind Sector is not directed to children. Its Google Play target audience is 13 and older, children are not among the selected age groups, and it is not enrolled in the Designed for Families programme. The under-13 band exists so that a child who reaches the game anyway is treated conservatively — COPPA flag set for every supported ad network, advertising consent denied, sale and sharing restricted — rather than being ignored.</p>
-      <p><strong>Persistent identifiers for a user in that band.</strong> When the COPPA flag is set, Blind Sector's understanding is that Unity may still use a persistent identifier for support for the internal operations of the service, and for nothing else. Those permitted uses are: delivering an advertisement that is chosen from the context rather than from the user, limiting how often the same advertisement is shown, maintaining and analysing the functioning of the app and the advertising system, protecting the security and integrity of that system, detecting and preventing fraud, and complying with legal obligations.</p>
+      <p><strong>Why this section is detailed.</strong> The age screen means Blind Sector can end up with actual knowledge that a particular user is under 13. COPPA applies on that basis to a general-audience service, not only to a service directed at children, so the handling of that band is set out here in full rather than left implied.</p>
+      <p><strong>Persistent identifiers for a user in that band.</strong> When the COPPA flag is set, Blind Sector's understanding is that Unity may still use persistent identifiers — principally the IP address and the advertising identifier — for support for the internal operations of the service, and for nothing else. Those permitted uses are: delivering an advertisement that is chosen from the context rather than from the user, limiting how often the same advertisement is shown, maintaining and analysing the functioning of the app and the advertising system, protecting the security and integrity of that system, detecting and preventing fraud, and complying with legal obligations.</p>
       <p>In that mode the identifier is not used to build a profile of the user, to select advertising from their behaviour or interests, or to contact them. The measure preventing other uses is the COPPA flag itself, which Blind Sector sets before the SDK is initialized and which instructs every supported ad network to operate in its child-directed mode; Blind Sector requests no personalized advertising for that band under any circumstances, and the setting cannot be changed by the user without going through the age screen again. Enforcement of the restriction inside Unity's own systems is Unity's, described in Unity's policy.</p>
     </section>
 
