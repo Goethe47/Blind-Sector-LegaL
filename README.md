@@ -19,7 +19,6 @@ https://goethe47.github.io/Blind-Sector-LegaL/licenses.html — сторонни
 
 - `index.html` — политика конфиденциальности
 - `licenses.html` — сторонние лицензии на звук, шрифты и SDK
-- `roadmap.html` — дорожная карта для тестеров, единственная страница на русском
 - `styles.css` — оформление в палитре игры
 - `fonts/` — Rubik и Unbounded, те же, что в игре, плюс тексты лицензий OFL
 - `.nojekyll` — отключает обработку Jekyll на GitHub Pages
